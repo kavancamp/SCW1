@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background-color: #f5f0fe;
+      }
+      h1 {
+        color: #885df1;
+        font-size: 48px;
+        text-decoration: underline;
+        font-weight: thin;
+        text-align: center;
+      }
+      h2 {
+        color: #272044;
+        text-align: center;
+      }
+      ul {
+        text-align: center;
+        padding: 0;
+      }
+      li {
+        display: inline;
+        padding-left: 10px;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .code {
+        color: #0000ff;
+      }
+      .workshops {
+        color: #ff0000;
+      }
+      .stories {
+        color: #00ff00;
+      }
+      .info {
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      .btn {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 20px 20px;
+        margin: 0 auto;
+        display: block;
+        color: #885df1;
+        box-shadow: 5px;
+        border-radius: 5px;
+        box-shadow: 10px 5px 5px gray;
+        border: 1px solid #885df1;
+        transition: all 100ms ease-in-out;
+      }
+      button:hover {
+        background-color: aquamarine;
+        color: white;
+      }
+      div {
+        text-align: center;
+      }
+      .mail,
+      .insta {
+        text-decoration: none;
+        color: #885df1;
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SheCodes</h1>
+    <h2>Coding Workshop</h2>
+
+    <button class="btn btn-primary">Apply Now</button>
+    <script>
+      function contactShe() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+
+        if (age >= 18) {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Thank you " + name + "! Welcome to SheCodes!";
+        } else {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Sorry, " + name + "! You are too young to join";
+        }
+      }
+
+      let contactBtn = document.querySelector("button");
+      contactBtn.addEventListener("click", contactShe);
+    </script>
+    <ul>
+      <li>
+        <a href="https://www.shecodes.io/students" target="_blank" class="code">
+          Coders
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.shecodes.io/workshops"
+          target="_blank"
+          class="workshops"
+        >
+          Courses
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.shecodes.io/stories"
+          target="_blank"
+          class="stories"
+        >
+          Stories
+        </a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p class="info">
+      <strong> More info </strong>
+    </p>
+    <img
+      src="https://codeop.tech/wp-content/uploads/2022/09/women-in-coding-e1664430458975.jpg"
+      alt="women coding"
+      width="450px"
+    />
+    <div>
+      <a class="mail" href="mailto:hello@shecodes.io" target="_top"> Email </a>
+
+      <a href="https://www.instagram.com/shecodes.io/">Instagram </a>
+    </div>
+  </body>
+</html>
