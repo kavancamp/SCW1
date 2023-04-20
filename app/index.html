@@ -85,12 +85,10 @@
       function contactShe() {
         let name = prompt("What is your name?");
         let age = prompt("How old are you?");
-
+        let h1 = document.querySelector("h1");
         if (age >= 18) {
-          let h1 = document.querySelector("h1");
           h1.innerHTML = "Thank you " + name + "! Welcome to SheCodes!";
         } else {
-          let h1 = document.querySelector("h1");
           h1.innerHTML = "Sorry, " + name + "! You are too young to join";
         }
       }
