@@ -82,19 +82,28 @@
 
     <button class="btn btn-primary">Apply Now</button>
     <script>
-      function contactShe() {
-        let name = prompt("What is your name?");
+      function updateHeading(newHeading) {
+        let heading = document.querySelector("h1");
+        heading.innerHTML = newHeading;
+      }
+
+      function canApply() {
         let age = prompt("How old are you?");
-        let h1 = document.querySelector("h1");
-        if (age >= 18) {
-          h1.innerHTML = "Thank you " + name + "! Welcome to SheCodes!";
+        return age >= 18;
+      }
+
+      function apply() {
+        let firstName = prompt("What is your first name?");
+
+        if (canApply()) {
+          updateHeading(`Hi ${firstName}! Welcome to SheCodes 👩‍💻`);
         } else {
-          h1.innerHTML = "Sorry, " + name + "! You are too young to join";
+          updateHeading(`Sorry ${firstName}, you can't apply to SheCodes.`);
         }
       }
 
-      let contactBtn = document.querySelector("button");
-      contactBtn.addEventListener("click", contactShe);
+      let applyButton = document.querySelector("button");
+      applyButton.addEventListener("click", apply);
     </script>
     <ul>
       <li>
